@@ -5,91 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey Form FCC</title>
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1 id="title">Questionário Gex_Tp</h1>
-        <p id="description">Responda ao formulário para ajudar o canal melhorar</p>
-    </header>
+    <main>
+        <header>
+            <h1 id="title">Questionário Gex_Tp</h1>
+            <p id="description">Responda ao formulário para ajudar o canal melhorar</p>
+        </header>
+    
+        <form action="javascript:alert('Aooba meus queridos, sim o formulário está funcionando.');" id="survey-form">
+            <div class="form-group">
+                <label id="name-label" for="name">Nome
+                    <input type="text" name="name" id="name" required placeholder="Insira seu nome">
+                </label>
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email">Email
+                    <input type="email" name="email" id="email" required placeholder="exemplo@gmail.com">
+                </label>
+            </div>
+            <div class="form-group">
+                <label id="number-label" for="age">Idade
+                    <input type="number" name="age" id="number" min="4" max="120" placeholder="Insira sua idade">
+                </label>
+            </div>
+            <div class="form-group" id="id-drop">
+                <label for="dropdown-know" id="drop-label">Como você soube do canal
+                    <select name="dropdown-know" id="dropdown" class="drop">
+                        <option disabled selected value>Escolha uma opção</option>
+                        <option value="youtube">Feed do YouTube</option>
+                        <option value="insta">Pelo seu Instagram</option>
+                        <option value="friend">Amigos</option>
+                    </select>
+                </label>
+            </div>
+            <div class="form-group">
+                <p>Você recomendaria o canal para seus amigos?</p>
+                <div class="radios">
+                    <label>
+                        <input type="radio" checked name="recommend" class="radio" value="sure">
+                        Com ceretza
+                    </label>
+                    <label>
+                        <input type="radio" name="recommend" class="radio" value="maybe">
+                        Talvez
+                    </label>
+                    <label>
+                        <input type="radio" name="recommend" class="radio" value="no">
+                        Não
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="dropdown-fav" id="drop-label">Qual seu conteúdo preferido do canal?
+                    <select name="dropdown-fav" id="dropdown-fav" class="drop">
+                        <option disabled selected value>Escolha uma opção</option>
+                        <option value="doom">Série de DOOM</option>
+                        <option value="horda">Modo HORDA</option>
+                        <option value="shorts">Shorts</option>
+                    </select>
+                </label>
+            </div>
+            <div class="form-group">
+                <p>Como você fica ao ver os vídeos do canal?</p>
+                <div class="checkbox">
 
-    <form action="javascript:alert('Aooba meus queridos, sim o formulário está funcionando.');" id="survey-form">
-        <div class="form-group">
-            <label id="name-label" for="name">Nome
-                <input type="text" name="name" id="name" required placeholder="Insira seu nome">
-            </label>
-        </div>
-        <div class="form-group">
-            <label id="email-label" for="email">Email
-                <input type="email" name="email" id="email" required placeholder="exemplo@gmail.com">
-            </label>
-        </div>
-        <div class="form-group">
-            <label id="number-label" for="age">Idade
-                <input type="number" name="age" id="number" min="4" max="120" placeholder="Insira sua idade">
-            </label>
-        </div>
-        <div class="form-group">
-            <label for="dropdown-know" id="drop-label">Como você soube do canal
-                <select name="dropdown-know" id="dropdown" class="drop">
-                    <option disabled selected value>Escolha uma opção</option>
-                    <option value="youtube">Feed do YouTube</option>
-                    <option value="insta">Pelo seu Instagram</option>
-                    <option value="friend">Amigos</option>
-                </select>
-            </label>
-        </div>
-        <div class="form-group">
-            <p>Você recomendaria o canal para seus amigos?</p>
-            <label>
-                <input type="radio" checked name="recommend" class="radio" value="sure">
-                Com ceretza
-            </label>
-            <label>
-                <input type="radio" name="recommend" class="radio" value="maybe">
-                Talvez
-            </label>
-            <label>
-                <input type="radio" name="recommend" class="radio" value="no">
-                Não
-            </label>
-        </div>
-        <div class="form-group">
-            <label for="dropdown-fav" id="drop-label">Qual seu conteúdo preferido do canal?
-                <select name="dropdown-fav" id="dropdown-fav" class="drop">
-                    <option disabled selected value>Escolha uma opção</option>
-                    <option value="doom">Série de DOOM</option>
-                    <option value="horda">Modo HORDA</option>
-                    <option value="shorts">Shorts</option>
-                </select>
-            </label>
-        </div>
-        <div class="form-group">
-            <p>Como você fica ao ver os vídeos do canal?</p>
-            <label>
-                <input type="checkbox" checked name="vibe" class="checkbox" value="feliz">
-                Feliz
-            </label>
-            <label>
-                <input type="checkbox" name="vibe" class="checkbox" value="rindo">
-                Rindo horrores
-            </label>
-            <label>
-                <input type="checkbox" name="vibe" class="checkbox" value="triste">
-                Triste
-            </label>
-            <label>
-                <input type="checkbox" name="vibe" class="checkbox" value="bravo">
-                Bravo
-            </label>
-        </div>
-        <div class="form-group">
-            <label for="improve">Comente uma melhoria que você acha que seria bacana para o canal
-                <textarea name="improve" id="txt-area" cols="30" rows="10" placeholder="Escreva o que você gostaria que fosse implementado no canal"></textarea>
-            </label>
-        </div>
-        <div class="form-group">
-            <input id="submit" type="submit" value="Enviar Respostas">
-        </div>
-    </form>
+                    <label>
+                        <input type="checkbox" checked name="vibe" class="checkbox" value="feliz">
+                        Feliz
+                    </label>
+                    <label>
+                        <input type="checkbox" name="vibe" class="checkbox" value="rindo">
+                        Rindo horrores
+                    </label>
+                    <label>
+                        <input type="checkbox" name="vibe" class="checkbox" value="triste">
+                        Triste
+                    </label>
+                    <label>
+                        <input type="checkbox" name="vibe" class="checkbox" value="bravo">
+                        Bravo
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="t-area">
+                    <label for="improve">Comente uma melhoria que você acha que seria bacana para o canal
+                        <textarea name="improve" id="txt-area" cols="30" rows="10" placeholder="Escreva o que você gostaria que fosse implementado no canal"></textarea>
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <input id="submit" type="submit" value="Enviar Respostas">
+            </div>
+        </form>
+    </main>
 </body>
 </html>

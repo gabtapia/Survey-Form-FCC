@@ -1,0 +1,90 @@
+* {
+    font-family: "Work Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #fafafa;
+    background: rgb(2,0,36);
+    background: linear-gradient(-90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 50%, rgba(40,40,224,1) 100%);
+}
+
+main {
+    margin: 4em 0;
+}
+
+header {
+    text-align: center;
+    margin: 20px;
+}
+
+#survey-form {
+    background-color: rgba(212, 9, 9, 0.7);
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.form-group {
+    display: block;
+    padding: 20px;
+}
+
+input, select {
+    width: 100%;
+    height: 2rem;
+    border-radius: 4px;
+    border: 1px solid black;
+    padding-left: .5rem;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+.radios label, .checkbox label {
+    display: flex;
+    align-items: center;
+}
+
+.radios input, .checkbox input {
+    height: 1.1rem;
+    width: 1.1rem;
+    margin-right: .625rem;
+}
+
+.t-area label {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    border-radius: 4px;
+    border: 1px solid black;
+    padding-left: .5rem;
+    padding-top: .5rem;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+#submit {
+    background-color: #37af65;
+    color: #fafafa;
+    height: 3rem;
+    font-size: 15px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#submit:hover {
+    background: #2c874f;
+    border: 1px solid #0f0f0f;
+}
+
+@media (max-width: 800px) {
+    #survey-form {
+        width: 75%;
+    }
+}
