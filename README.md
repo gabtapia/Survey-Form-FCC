@@ -1,3 +1,5 @@
+## [Acesse o projeto finalizado, online](https://gabtapia.github.io/G-linktree)
+
 # Survey Form Requirements
 
 1. Você deve ter um título de página em um elemento `<h1>` com o `id="title"`.
